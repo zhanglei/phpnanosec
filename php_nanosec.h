@@ -44,7 +44,7 @@ PHP_RINIT_FUNCTION(nanosec);
 PHP_RSHUTDOWN_FUNCTION(nanosec);
 PHP_MINFO_FUNCTION(nanosec);
 
-PHP_FUNCTION(phpnanosec);	/* For testing, remove later. */
+PHP_FUNCTION(nanosec);	/* For testing, remove later. */
 
 /* 
   	Declare any global variables you may need between the BEGIN

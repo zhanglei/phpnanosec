@@ -49,7 +49,7 @@ static int le_nanosec;
  * Every user visible function must have an entry in nanosec_functions[].
  */
 const zend_function_entry nanosec_functions[] = {
-	PHP_FE(phpnanosec, NULL)
+	PHP_FE(nanosec, NULL)
 	PHP_FE_END	/* Must be the last line in nanosec_functions[] */
 };
 /* }}} */
@@ -154,7 +154,7 @@ PHP_MINFO_FUNCTION(nanosec)
 /* }}} */
 
 
-PHP_FUNCTION(phpnanosec)
+PHP_FUNCTION(nanosec)
 {
 	struct timespec t;
 	clock_gettime(CLOCK_REALTIME, &t);
