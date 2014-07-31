@@ -158,10 +158,10 @@ PHP_FUNCTION(phpnanosec)
 {
 	struct timespec t;
 	clock_gettime(CLOCK_REALTIME, &t);
-	char *strg;
+	char ret[100];
 
-	len = spprintf(&strg, 0, "%Lf", (long double)(t.tv_sec + t.tv_nsec*0.000000001));
-	RETURN_STRINGL(strg, len, 0);
+	snprintf(ret, 100, "%Lf", (long double)(t.tv_sec + t.tv_nsec*0.000000001));
+	RETURN_STRING(ret, 1);
 }
 
 
